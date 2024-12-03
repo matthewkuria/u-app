@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
-import { useAuth } from "../../context/AuthContext";
 
 const LoginScreen = () => {
-  const { login, error } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    login(email, password);
   };
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
-      {error && <Text style={styles.error}>{error}</Text>}
       <TextInput
         placeholder="Email"
         value={email}

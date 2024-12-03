@@ -28,4 +28,4 @@ export const PreferencesProvider = ({ children }) => {
   );
 };
 
-export const usePreferences = () => useContext(PreferencesContext);
+export default PreferencesContext;
